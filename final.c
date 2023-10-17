@@ -456,18 +456,21 @@ label:
         int k2 = k;
         if (ctrfirst == 0)
         {
-
+            printf("************************************************************\n");
+            printf("*******************WELCOME TO OUR SYSTEM********************\n");
+            printf("************************************************************\n");
             printf("\n");
 
-            
+            printf("+----------------------------------------------------------+\n");
             printf("PRESS 1 to signup and 0 to sign in: ");
             scanf("%d", &c);
+            printf("+----------------------------------------------------------+\n");
             
         }
         else
         {
         later:
-            
+            printf("+----------------------------------------------------------+\n");
             printf("Please enter your username and password \n");
             c = 0;
         }
@@ -475,6 +478,7 @@ label:
         while (c == 0)
         {
         retry:
+            
             printf("Enter username: ");
             char *str = malloc(sizeof(char) * MAX_LENGTH);
             scanf("%s", str);
@@ -482,14 +486,14 @@ label:
             printf("Enter password: ");
             char *str2 = malloc(sizeof(char) * MAX_LENGTH);
             scanf("%s", str2);
-            
+            printf("+----------------------------------------------------------+\n");
             int value = loginu(str, str2, main);
             int valuep = loginu(str, str2, main);
             struct node *temp9 = logins(str, str2, main);
             // printf("%d",valuep);
             if (value == 0 && valuep == 0)
             {
-                
+                printf("************************************************************\n");
                 int lenusrname = strlen(temp9->usern);
                 int numstars = 62 - 13 - lenusrname;
                 for (int i = 0; i < numstars; i++)
@@ -501,7 +505,7 @@ label:
                 {
                     printf("*");
                 }
-                
+                printf("************************************************************\n \n");
                 c = 2;
             back:;
                 struct node *temp8 = temp9->next;
@@ -509,12 +513,13 @@ label:
                 struct node *temp16 = temp9->next;
                 struct node *temp12 = main->link;
 
-                
+                printf("+----------------------------------------------------------+\n");
                 printf(" 1)See  pending requests. \n");
                 printf(" 2)View mutals and send requests. \n");
                 printf(" 3)View your friends. \n");
                 printf(" 4)To search for people. \n");
-                
+                printf("+----------------------------------------------------------+\n");
+
                 int choice;
                 printf("Enter choice: ");
                 scanf("%d", &choice);
@@ -757,7 +762,7 @@ label:
 
                     while (y == 1)
                     {
-                        
+                        printf("+----------------------------------------------------------+\n");
                         for (int i = 0; i < u; i++)
                         {
                             printf("Enter ");
@@ -765,7 +770,7 @@ label:
                             printf("for sending a request to ");
                             printf("%d \n", brr[i]);
                         }
-                        
+                        printf("+----------------------------------------------------------+\n");
                         printf("\n");
 
                         int r;
@@ -907,7 +912,7 @@ label:
             }
             if (aa == 1)
             {
-                
+                printf("************************************************************\n");
                 int lenusrname = strlen(temp9->usern);
                 int numstars = 62 - 9 - lenusrname;
                 for (int i = 0; i < numstars; i++)
@@ -919,7 +924,7 @@ label:
                 {
                     printf("*");
                 }
-                
+                printf("************************************************************\n \n");
 
                 goto end;
             }
